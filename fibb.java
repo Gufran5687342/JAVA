@@ -1,6 +1,7 @@
 import java.util.*;
 
-class fibb {
+// --- PROGRAM 1: FIBONACCI SERIES ---
+class Fibb {
     public static void printFibonacci(int n) {
         if (n <= 0) {
             System.out.println("Please enter a number greater than 0.");
@@ -35,25 +36,4 @@ class fibb {
         
         sc.close();
     }
-}
-
-public static void greaternum(int num1,int num2){
-    if(num1 > num2 ){
-        System.out.println("number1 is greater");
-    }
-    else if(num1 == num2){
-        System.out.println("both are equal");
-
-    else{
-        System.out.println("number2 is greater");
-    }
-}
-public static void main(String args[]){
-    Scanner sc = new Scanner(System.in);
-    System.out.println("enter number1: ");
-    int num1 = sc.nextInt();
-    System.out.println("enter number2: ");
-    int num2 = sc.nextInt();
-    greaternum(num1, num2);
-
 }
