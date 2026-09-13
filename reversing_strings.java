@@ -8,11 +8,11 @@ public class reversing_strings{
             int front = i;
             int back = str.length() - 1 - i;
 
-            char frontChar = str.charAt(front);
+            char FrontChar = str.charAt(front);
             char backChar = str.charAt(back);
 
             str.setCharAt(front, backChar);
-            str.setCharAt(back, frontChar);
+            str.setCharAt(back, FrontChar);
 
 
         }
