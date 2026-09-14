@@ -8,7 +8,7 @@ class third{
                 System.out.print(" ");
             }
             for(int j = 0; j <= 5; j++){
-                System.out.print(" * ");
+                System.out.print(" + ");
             }
             System.out.println();
         }
