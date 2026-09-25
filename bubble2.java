@@ -5,7 +5,7 @@ public class bubble2{
         }
     }
     public static void main(String args[]){
-        int arr[] = {45,12,85,32,10};
+        int arr[] = {99,54,61,23,10,100,2};
         for(int i = 0; i < arr.length-1; i++){
             for(int j = 0; j <arr.length-i-1; j++){
                 if(arr[j] > arr[j+1]){
