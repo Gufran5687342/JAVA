@@ -9,7 +9,7 @@ public class Bitwise {
         System.out.println("Point 1 Result: " + (((15 >> 1) & 6) ^ 3)); // Expected: 5
         System.out.println("Point 2 Result: " + ((2 << 3) | (20 >> 2))); // Expected: 21
 
-        System.out.print("basic bit manipulation")
+        System.out.print("basic bit manipulation");
     }
 }
     
