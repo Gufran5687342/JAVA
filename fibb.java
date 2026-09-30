@@ -1,7 +1,7 @@
 import java.util.*;
 
-// --- PROGRAM 1: FIBONACCI SERIES ---
-class Fibb {
+
+class fibb {
     public static void printFibonacci(int n) {
         if (n <= 0) {
             System.out.println("Please enter a number greater than 0.");
