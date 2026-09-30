@@ -10,7 +10,7 @@ class reversing{
 
     }
     public static void main(String args[]){
-        String str = "Shaheen";
-        printRev(str,6);
+        String str = "GOAT";
+        printRev(str,str.length()-1);
     }
 }
