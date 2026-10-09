@@ -1,31 +1,31 @@
 import java.util.*;
 public class practise {
-    public static void reverseArr(int arr[], int left, int right){
-        if(left >= right){
-            return;
+    public static int CountCode(String str, int idx){
+        if(idx >= str.length()-3){
+            return 0;
         }
-        int temp = arr[left];
-        arr[left] = arr[right];
-        arr[right] = temp;
+        if(str.charAt(idx) == 'c' ){
+            if(str.charAt(idx+1) == 'o'){
+                if(str.charAt(idx+3) == 'e'){
+                    return 1+CountCode(str, idx+1);
+                }
+            }
 
-        reverseArr(arr, left+1, right-1);
+        }
+        return 0+CountCode(str, idx+1);
 
     }
  
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        int arr[] = {20,30,86,56,12,11,9};
-        reverseArr(arr, 0, arr.length-1);
-        for(int i = 0; i <= arr.length-1; i++){
-            System.out.print(" "+arr[i]);
+        String str = sc.next();
+        int add = CountCode(str, 0);
+        System.out.print(add);
+
 
         }
        
-        
-
-
-
-
+  
     }
     
-}
+
