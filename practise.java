@@ -1,31 +1,25 @@
 import java.util.*;
 public class practise {
-    public static int CountCode(String str, int idx){
-        if(idx >= str.length()-3){
-            return 0;
+    public static void subsequences(String str, int idx, String newString) {
+        if(idx == str.length()){
+            System.out.println(newString);
+            return;
         }
-        if(str.charAt(idx) == 'c' ){
-            if(str.charAt(idx+1) == 'o'){
-                if(str.charAt(idx+3) == 'e'){
-                    return 1+CountCode(str, idx+1);
-                }
-            }
+        char currChar = str.charAt(idx); 
+        //to be
+        subsequences(str, idx+1, newString+currChar);
 
-        }
-        return 0+CountCode(str, idx+1);
+        //to not be
+        subsequences(str, idx+1, newString);
+    
+}
+public static void main(String[] args) {
+    String str = "abc";
+    subsequences(str, 0, "");
 
-    }
- 
-    public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        String str = sc.next();
-        int add = CountCode(str, 0);
-        System.out.print(add);
-
-
-        }
+}
+}
        
   
-    }
     
 
