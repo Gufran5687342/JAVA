@@ -1,26 +1,25 @@
 import java.util.*;
 
 public class practise {
-    public static String[] keypad = {".","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz"};
 
-    public static void printComb(String str, int idx, String combination) {
-        if(idx == str.length()){
-            System.out.println(combination);
-            return;
+    public static int countPaths(int i, int j,int n, int m) {
+        if(i == n || j == m){
+            return 0;
         }
-
-        char currchar = str.charAt(idx);
-        String mapping = keypad[currchar - '0'];
-
-        for(int i =0; i < mapping.length();i++){
-            printComb(str, idx+1, combination+mapping.charAt(i));
+        if(i == n-1 && j == m-1){
+            return 1;
         }
+        //downwards
+         int downPaths = countPaths(i+1, j, n, m);
+         //right side
+         int rightpaths = countPaths(i, j+1, n, m);
 
+         return downPaths + rightpaths;
 }
 public static void main(String[] args) {
-    String str = "234";
-    printComb(str, 0, "");
-    
+    int total = countPaths(0, 0, 3, 4);
+    System.out.println(total);
+  
 }
 }
        
