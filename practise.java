@@ -1,28 +1,69 @@
-import java.util.*;
+class practise {
+    public void draw() {
+        System.out.println("drawing a shape");
+    }
 
-public class practise {
+    public void erase() {
+        System.out.println("erasing a shape");
+    }
+}
 
-    public static int countPaths(int i, int j,int n, int m) {
-        if(i == n || j == m){
-            return 0;
-        }
-        if(i == n-1 && j == m-1){
-            return 1;
-        }
-        //downwards
-         int downPaths = countPaths(i+1, j, n, m);
-         //right side
-         int rightpaths = countPaths(i, j+1, n, m);
+class Circle extends practise {
+    @Override
+    public void draw() {
+        System.out.println("drawing a circle");
+    }
 
-         return downPaths + rightpaths;
+    @Override
+    public void erase() {
+        System.out.println("erasing a circle");
+    }
 }
-public static void main(String[] args) {
-    int total = countPaths(0, 0, 3, 4);
-    System.out.println(total);
-  
+
+class Triangle extends practise {
+    @Override
+    public void draw() {
+        System.out.println("drawing a triangle");
+    }
+
+    @Override
+    public void erase() {
+        System.out.println("erasing a triangle");
+    }
 }
+
+class Square extends practise
+ {
+    @Override
+    public void draw() {
+        System.out.println("drawing a square");
+    }
+
+    @Override
+    public void erase() {
+        System.out.println("erasing a square");
+    }
 }
-       
+
+public class Main {
+    public static void main(String[] args) {
+        Circle c = new Circle();
+        Triangle t = new Triangle();
+        Square s = new Square();
+
+        System.out.println("Using circle object");
+        c.draw();
+        c.erase();
+
+        System.out.println("Using triangle object");
+        t.draw();
+        t.erase();
+
+        System.out.println("Using square object");
+        s.draw();
+        s.erase();
+    }
+}  
   
     
 
